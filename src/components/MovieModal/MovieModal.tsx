@@ -3,13 +3,13 @@ import { createPortal } from "react-dom";
 import type { Movie } from "../../types/movie";
 import css from "./MovieModal.module.css";
 
-interface Props {
+interface MovieModalProps {
   movie: Movie;
   onClose: () => void;
 }
 
-export default function MovieModal({ movie, onClose }: Props) {
-  const modalRoot = document.getElementById("modal-root") as HTMLElement;
+export default function MovieModal({ movie, onClose }: MovieModalProps) {
+  const modalRoot = document.getElementById("document.body") as HTMLElement;
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
