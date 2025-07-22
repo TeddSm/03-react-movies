@@ -9,8 +9,6 @@ interface MovieModalProps {
 }
 
 export default function MovieModal({ movie, onClose }: MovieModalProps) {
-  const modalRoot = document.getElementById("document.body") as HTMLElement;
-
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -62,5 +60,5 @@ export default function MovieModal({ movie, onClose }: MovieModalProps) {
     </div>
   );
 
-  return createPortal(modalContent, modalRoot);
+  return createPortal(modalContent, document.body);
 }
